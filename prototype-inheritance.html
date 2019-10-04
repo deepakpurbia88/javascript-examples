@@ -1,0 +1,22 @@
+<script>
+	var parentClass = function(){
+		this.p1 = 100;
+	}
+	var childClass = function(){
+		this.c1 = 10;
+		parentClass.call(
+            this
+        );
+	}
+
+	var childInstance1 = new childClass();
+    
+	childClass.prototype = Object.create(parentClass.prototype);
+	var childInstance2 = new childClass();
+
+	var parentInstance1 = new parentClass();
+
+	console.log(childInstance2.p1);
+	console.log(childInstance1.p1);
+	
+</script>

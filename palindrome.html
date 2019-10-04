@@ -1,0 +1,15 @@
+<script>
+	function palindrome(number){
+		 var palnum = 0;
+		while(number>0){
+			 var rem = parseInt(number%10);
+			var palnum = palnum * 10 + rem;
+			number = parseInt(number/10);
+		}
+		console.log("reverse number",palnum);
+	}
+
+	palindrome(123);
+
+
+</script>

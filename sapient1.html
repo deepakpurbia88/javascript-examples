@@ -1,0 +1,54 @@
+<script>
+
+
+function checkPalindrome(str) {
+	var reverse = str.split("").reverse().join("");
+	if(reverse == str)
+		return true;
+	else
+		return false;
+}
+
+function solution(S) {
+
+	var maxLenPal = 0;
+	
+
+for(var i=0; i < S.length; i++) 
+{
+	var subString = S.substr(i, S.length);
+
+for(var j=subString.length; j>=0; j--) 
+{
+var subSubString = subString.substr(0, j);
+
+
+if (checkPalindrome(subSubString))
+	{
+		if (subSubString.length > maxLenPal) 
+		{
+			maxLenPal = subSubString.length;
+
+			
+		}
+	}
+}
+}
+
+return isPrime(maxLenPal);
+
+}
+
+function isPrime(maxLenPal) {
+  for(var i = 2; i < maxLenPal; i++)
+    if(maxLenPal % i === 0) return "NO";
+  return "YES";
+}
+
+
+
+console.log(solution("abaaaaba"));
+
+		
+	
+</script>

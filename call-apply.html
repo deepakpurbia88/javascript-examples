@@ -1,0 +1,20 @@
+<script type="text/javascript">
+	var a = {
+		name:"deepak",
+		class:"MCA"
+	};
+
+	var b = {
+		name:"rakesh",
+		class:"BCA",
+		getData : function(){
+			return this.name+" "+ this.class;
+		}
+	};
+
+
+	console.log(b.getData.call(a));
+
+
+
+</script>
