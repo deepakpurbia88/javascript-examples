@@ -1,0 +1,27 @@
+<script type="text/javascript">
+	function findOccur(str){
+		var obj = {}
+		for(var i=0;i<str.length;i++){
+			var currentValue = str[i];
+			if(currentValue in obj){
+				let count = obj[currentValue];
+				obj[currentValue] = count + 1;
+
+			}else{
+				obj[currentValue] = 1;
+			}
+		}
+		console.log(obj);
+
+		obj.map(key , value){
+			console.log(key);
+			console.log(value);
+		}
+	}
+
+
+
+
+	var str = "aaccbbac";
+	findOccur(str);
+</script>

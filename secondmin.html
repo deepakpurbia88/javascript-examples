@@ -1,0 +1,21 @@
+<script>
+	function secondMin(arr){
+		min = Number.MAX_VALUE;
+		secondMin = Number.MAX_VALUE;
+		for(var i=0; i<arr.length;i++){
+			if(min>arr[i]){
+				secondMin = min;
+				min = arr[i];
+			}else if(secondMin>arr[i]&&secondMin!=min){
+				secondMin = arr[i];
+			}
+			
+
+			
+		}
+		console.log(min);
+		console.log(secondMin);
+	}
+
+	secondMin([5,10,1,-12,2,-1,1,0]);
+</script>
